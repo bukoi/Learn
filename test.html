@@ -1,37 +1,125 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebLayout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif; /* Set a default font */
+        }
+
+        nav {
+            position: relative;
+            height: 70px;
+            background-color: #E1D5AA;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav img {
+            height: 60px;
+            margin-left: 5%;
+            transform: translateX(10%);
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 100vh; 
+            overflow: hidden;
+        }
+
+        section video {
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            min-width: 100%; 
+            min-height: 100%; 
+            width: auto; 
+            height: auto; 
+            object-fit: cover; 
+            transform: translate(-50%, -70%); 
+            z-index: -1;
+        }
+
+        footer {
+            padding: 20px; /* Add some padding for the footer */
+            text-align: center; /* Center the text */
+        }
+
+        /* Media queries */
+        @media (max-width: 800px) {
+            nav {
+                height: 70px; /* Adjust the height of the nav bar */
+                padding: 0 10px; /* Reduce padding */
+            }
+
+            nav img {
+                height: 60px; /* Adjust logo size */
+                margin-left: 10px; /* Reduce margin */
+            }
+
+            section {
+                height: 80vh; /* Adjust section height for smaller screens */
+            }
+        }
+
+        @media (max-width: 500px) {
+            nav {
+                height: 60px; /* Further reduce nav height */
+            }
+
+            nav img {
+                height: 50px; /* Further adjust logo size */
+            }
+
+            section {
+                height: 70vh; /* Further adjust section height */
+            }
+
+            footer {
+                padding: 10px; /* Adjust footer padding */
+            }
+
+            footer details {
+                font-size: 24px; /* Reduce font size for smaller screens */
+            }
+        }
+    </style>
 </head>
-<body style="margin: 0;padding: 0;height: 100%;">
-    <nav style="position: relative; height: 90px;background-color:#E1D5AA;display: flex;align-items: center;padding: 0 20px;">
-        <img src="new-logo-black.webp" style="height: 80px;position: absolute;margin-left: 15px;">
+<body>
+    <nav>
+        <img src="new-logo-black.webp" alt="Logo">
     </nav>
-    <section style="display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 100vh; 
-    overflow: hidden;">
-        <video src="file.mp4" autoplay muted loop style="position: absolute; 
-        top: 50%; 
-        left: 50%; 
-        min-width: 100%; 
-        min-height: 100%; 
-        width: auto; 
-        height: auto; 
-        object-fit: cover; 
-        transform: translate(-50%, -50%); 
-        z-index: -1;"></video>
+    <section>
+        <video src="file.mp4" id="name" autoplay muted loop></video>
     </section>
     
     <footer>
-    <details><!--this adds a drop down where you click on company name it show details-->
-        <summary style="text-align: left;font-size: 30px;">Company Name</summary>
-        <p>it is a fast service food company satisfy all your craving</p>
-    </details>
+        <details>
+            <summary style="text-align: left; font-size: 30px;">Company Name</summary>
+            <p>It is a fast service food company satisfying all your cravings.</p>
+        </details>
     </footer>
+    <script>
+        const video = document.getElementById("name");
+    
+        // Set the initial playback rate
+        video.playbackRate = 0.9; // Start at normal speed
+    
+        video.addEventListener("timeupdate", () => {
+            if (video.currentTime < 6) {
+                video.playbackRate = 0.9; // Normal speed for the first 6 seconds
+            } else {
+                video.playbackRate = 1.2; // Speed up after 6 seconds
+            }
+        });
+    </script>
 </body>
 </html>
