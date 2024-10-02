@@ -1,125 +1,60 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebLayout</title>
+    <title>2D Structure Example</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif; /* Set a default font */
+            background-color: #faebdf;
+            font-family: Arial, sans-serif;
         }
 
-        nav {
-            position: relative;
-            height: 70px;
-            background-color: #E1D5AA;
+        .container {
             display: flex;
-            align-items: center;
-            padding: 0 20px;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center align items */
+            margin: 20px; /* Margin around the container */
         }
 
-        nav img {
-            height: 60px;
-            margin-left: 5%;
-            transform: translateX(10%);
+        .title-row {
+            display: flex; /* Use flexbox to align items in a row */
+            align-items: center; /* Center align vertically */
+            margin-bottom: 20px; /* Space between title and image */
+            text-align: center; /* Center align title */
         }
 
-        section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            height: 100vh; 
-            overflow: hidden;
+        .title-text {
+            font-size: 2rem; /* Font size for the title */
+            color: red; /* Color for the title */
+            margin: 0 10px; /* Add horizontal margin for spacing */
         }
 
-        section video {
-            position: absolute; 
-            top: 50%; 
-            left: 50%; 
-            min-width: 100%; 
-            min-height: 100%; 
-            width: auto; 
-            height: auto; 
-            object-fit: cover; 
-            transform: translate(-50%, -70%); 
-            z-index: -1;
+        .star {
+            width: 50px; /* Set the width for the star images */
+            height: auto; /* Maintain aspect ratio */
         }
 
-        footer {
-            padding: 20px; /* Add some padding for the footer */
-            text-align: center; /* Center the text */
-        }
-
-        /* Media queries */
-        @media (max-width: 800px) {
-            nav {
-                height: 70px; /* Adjust the height of the nav bar */
-                padding: 0 10px; /* Reduce padding */
-            }
-
-            nav img {
-                height: 60px; /* Adjust logo size */
-                margin-left: 10px; /* Reduce margin */
-            }
-
-            section {
-                height: 80vh; /* Adjust section height for smaller screens */
-            }
-        }
-
-        @media (max-width: 500px) {
-            nav {
-                height: 60px; /* Further reduce nav height */
-            }
-
-            nav img {
-                height: 50px; /* Further adjust logo size */
-            }
-
-            section {
-                height: 70vh; /* Further adjust section height */
-            }
-
-            footer {
-                padding: 10px; /* Adjust footer padding */
-            }
-
-            footer details {
-                font-size: 24px; /* Reduce font size for smaller screens */
-            }
+        .image-row img {
+            width: 300px; /* Set width for the image */
+            height: auto; /* Maintain aspect ratio */
         }
     </style>
 </head>
 <body>
-    <nav>
-        <img src="new-logo-black.webp" alt="Logo">
-    </nav>
-    <section>
-        <video src="file.mp4" id="name" autoplay muted loop></video>
-    </section>
-    
-    <footer>
-        <details>
-            <summary style="text-align: left; font-size: 30px;">Company Name</summary>
-            <p>It is a fast service food company satisfying all your cravings.</p>
-        </details>
-    </footer>
-    <script>
-        const video = document.getElementById("name");
-    
-        // Set the initial playback rate
-        video.playbackRate = 0.9; // Start at normal speed
-    
-        video.addEventListener("timeupdate", () => {
-            if (video.currentTime < 6) {
-                video.playbackRate = 0.9; // Normal speed for the first 6 seconds
-            } else {
-                video.playbackRate = 1.2; // Speed up after 6 seconds
-            }
-        });
-    </script>
+
+<div class="container">
+    <div class="title-row">
+        <img src="star.webp" alt="star" class="star left-star">
+        <h1 class="title-text">All Time Favourite</h1>
+        <img src="star.webp" alt="star" class="star right-star">
+    </div>
+    <div class="image-row">
+        <img src="your-image.webp" alt="Descriptive Image" />
+    </div>
+</div>
+
 </body>
 </html>

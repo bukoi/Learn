@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #faebdf;
+  font-family: Arial, sans-serif; /* Set a default font */
+  z-index: 0;
+}
+
+.title {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Align text in a column */
+  position: absolute;
+  left: 15%; /* Align to the left, giving space for the logo */
+  top: 10%;
+  z-index: 2;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background-color: #ebd488;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 100;
+}
+
+nav img {
+  height: 60px;
+  margin-left: 5%;
+}
+
+.home-button {
+  background-color: #ebd488;
+  outline: none;
+  border: none;
+  color: #b12b22;
+  font-size: 100%;
+  margin-left: 82%; /* Pushes the button to the right */
+  transform: translateY(-5%);
+  transform: translateX(-280%);
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+.order-button {
+  position: absolute; /* Allow it to be positioned within the navbar */
+  right: 20px; /* Adjust horizontal position */
+  top: 15px; /* Adjust vertical position */
+  padding: 20px 40px; /* Padding for a rectangular shape */
+  background-color: #da3a19; /* Red background color */
+  color: white; /* Text color */
+  border: 2px solid transparent; /* Initial transparent border */
+  border-radius: 5px; /* Slightly rounds the corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+  transform: rotate(90deg) translateY(-57%) translateX(20%);
+}
+.order-button:hover {
+  background-color: white;
+  color: #b12b22;
+  border-color: #da3a19;
+}
+.order-butt {
+  position: absolute; /* Allow it to be positioned within the navbar */
+  right: 67%; /* Adjust horizontal position */
+  top: 70%; /* Adjust vertical position */
+  padding: 20px 40px; /* Padding for a rectangular shape */
+  background-color: #da3a19; /* Red background color */
+  color: white; /* Text color */
+  border: 2px solid transparent; /* Initial transparent border */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+  z-index: 2000; /* Ensure it's on top */
+  transform: scaleY(0.9) scaleX(0.9);
+}
+
+.order-butt:hover {
+  background-color: white;
+  color: #b12b22;
+  border-color: #da3a19;
+}
+
+.menu-button {
+  transform: translateX(-360%);
+  color: black;
+  text-decoration: none;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.section video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 85%;
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+  transform: translate(-50%, -73%);
+}
+
+.details {
+  transform: translateY(-18%);
+  padding: 7%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex: 1 1 calc(20% - 20px);
+  margin: 11px;
+  padding: 10px;
+  max-width: 20%;
+  background-color: white;
+  text-align: center;
+}
+
+.image {
+  margin-top: 1%; /* Adjust this to position your star section */
+  text-align: center;
+  align-items: centers;
+  background-color: white;
+  padding: 1%; /* Center text below the star */
+  margin: 5%;
+}
+.title-container {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the title */
+  align-items: center; /* Vertically align items */
+  background-color: white; /* Set background color */
+  padding: 1%; /* Add some padding */
+  margin: 1% 0; /* Add some margin above and below */
+}
+.star {
+  width: 40px; /* Set a fixed size for the stars */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 10px; /* Space between stars and title */
+  z-index: 99;
+}
+.title-text {
+  font-size: 40px; /* Adjust font size as needed */
+  color: black; /* Or whatever color you prefer */
+}
+.sigitem {
+  width: 40px; /* Set a fixed size for the stars */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 10px; /* Space between stars and title */
+  z-index: 99;
+}
+.scale-text {
+  transform: scale(1.5);
+  display: inline-block;
+}
+
+.image-row {
+  justify-content: space-between;
+  display: flex;
+  background-color: white; /* Set background color */
+  padding: 20px; /* Add some padding */
+  margin: 20px 0;
+}
+
+.name-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Space above the image */
+  text-align: center;
+  background-color: white; /* Set background color */
+  padding: 0 20px; /* Add some padding */
+  margin-top: 20px;
+}
+
+.mid-row-image {
+  width: 30%; /* Set width for the image */
+  height: auto;
+  margin: 20px; /* Maintain aspect ratio */
+}
+
+.left-row-image {
+  width: 30%; /* Set width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px;
+}
+
+.right-row-image {
+  width: 30%; /* Set width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px;
+  padding:10px
+}
+.small-text {
+  font-size: 13px;
+  transform: scaleY(0.9) translateY(-10%);
+  color: gray;
+  display: inline-block;
+  max-width: 150px; /* Set a maximum width for text block */
+  white-space: normal; /* Ensures the text wraps and doesn’t overflow */
+  word-wrap: break-word; /* Forces long words to wrap */
+  overflow-wrap: break-word;
+}
+.text-item {
+  flex: 1; /* Allow the text items to grow equally */
+  text-align: center; /* Center align text */
+}
+
+.left-text,
+.midle-text,
+.right-text {
+  font-size: 18px; /* Adjust font size as needed */
+  color: black; /* Or whatever color you prefer */
+  margin: 20px; /* Margin for spacing */
+}
