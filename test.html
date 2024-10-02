@@ -5,11 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebLayout</title>
 </head>
-<body>
-    <header style="background-color: rgb(55, 117, 110);">
-        <br>
-            <p style="text-align: center;font-size:30px;color: aliceblue;">My First Web</p>
-        <br>
-    </header>
+<body style="margin: 0;padding: 0;height: 100%;">
+    <nav style="position: relative; height: 90px;background-color:#E1D5AA;display: flex;align-items: center;padding: 0 20px;">
+        <img src="new-logo-black.webp" style="height: 80px;position: absolute;margin-left: 15px;">
+    </nav>
+    <section style="display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh; 
+    overflow: hidden;">
+        <video src="file.mp4" autoplay muted loop style="position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        min-width: 100%; 
+        min-height: 100%; 
+        width: auto; 
+        height: auto; 
+        object-fit: cover; 
+        transform: translate(-50%, -50%); 
+        z-index: -1;"></video>
+    </section>
+    
+    <footer>
+    <details><!--this adds a drop down where you click on company name it show details-->
+        <summary style="text-align: left;font-size: 30px;">Company Name</summary>
+        <p>it is a fast service food company satisfy all your craving</p>
+    </details>
+    </footer>
 </body>
 </html>
