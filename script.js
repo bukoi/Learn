@@ -2,10 +2,12 @@
 
 const video = document.getElementById("name");
 function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth", // This enables the smooth scrolling animation
-  });
+  if (window.scrollY > 0) {
+    window.scrollTo({ 
+      top: 0, 
+      behavior: "smooth" 
+    });
+  }
 }
 function goTOweb() {
   window.open("test.html", "_blank"); // Replace with your desired URL
