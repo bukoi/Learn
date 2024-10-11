@@ -53,16 +53,16 @@ nav img {
 }
 .order-button {
   position: absolute; /* Allow it to be positioned within the navbar */
-  right: 20px; /* Adjust horizontal position */
-  top: 15px; /* Adjust vertical position */
-  padding: 20px 40px; /* Padding for a rectangular shape */
+  right: 1%; /* Adjust horizontal position */
+  top: 1%; /* Adjust vertical position */
+  padding: 2% 3.5%; /* Padding for a rectangular shape */
   background-color: #da3a19; /* Red background color */
   color: white; /* Text color */
   border: 2px solid transparent; /* Initial transparent border */
   border-radius: 5px; /* Slightly rounds the corners */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
-  transform: rotate(90deg) translateY(-57%) translateX(20%);
+  transform: rotate(90deg) translateY(-57%) translateX(20%) scaleY(0.9);
 }
 .order-button:hover {
   background-color: white;
@@ -73,7 +73,7 @@ nav img {
   position: absolute; /* Allow it to be positioned within the navbar */
   right: 67%; /* Adjust horizontal position */
   top: 70%; /* Adjust vertical position */
-  padding: 20px 40px; /* Padding for a rectangular shape */
+  padding: 4% 5%; /* Padding for a rectangular shape */
   background-color: #da3a19; /* Red background color */
   color: white; /* Text color */
   border: 2px solid transparent; /* Initial transparent border */
@@ -93,6 +93,7 @@ nav img {
   transform: translateX(-360%);
   color: black;
   text-decoration: none;
+  justify-content: space-around;
 }
 .section {
   display: flex;
