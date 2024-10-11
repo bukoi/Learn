@@ -26,16 +26,16 @@ body {
 nav {
   position: fixed;
   width: 100%;
-  height: 70px;
+  height: 7.3%;
   background-color: #ebd488;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 1.1%;
   z-index: 100;
 }
 
 nav img {
-  height: 60px;
+  height: 95%;
   margin-left: 5%;
 }
 
@@ -127,7 +127,7 @@ nav img {
 }
 
 .flex-item {
-  flex: 1 1 calc(20% - 20px);
+  flex: 1 1 calc(20% - 10%);
   margin: 4%;
   padding: 3%;
   max-width: 20%;
@@ -152,7 +152,7 @@ nav img {
   margin: 1% 0; /* Add some margin above and below */
 }
 .star {
-  width: 40px; /* Set a fixed size for the stars */
+  width: 5%; /* Set a fixed size for the stars */
   height: auto; /* Maintain aspect ratio */
   margin: 0 10px; /* Space between stars and title */
   z-index: 99;
@@ -162,20 +162,20 @@ nav img {
   color: black; /* Or whatever color you prefer */
 }
 .sigitem {
-  width: 40px; /* Set a fixed size for the stars */
+  width: 90%; /* Set a fixed size for the stars */
   height: auto; /* Maintain aspect ratio */
-  margin: 0 10px; /* Space between stars and title */
+  margin: 0 100%; /* Space between stars and title */
   z-index: 99;
 }
 .scale-text {
-  transform: scale(0.6); /* Initial state: scaled down */
+  transform: scale(60%); /* Initial state: scaled down */
   opacity: 0; /* Hidden initially */
   display: inline-block;
   transition: transform 1.3s ease, opacity 1.3s ease; /* Smooth animation */
 }
 
 .scale-text.show {
-  transform: scale(1.5); /* Final state: scaled up when in view */
+  transform: scale(150%); /* Final state: scaled up when in view */
   opacity: 1; /* Visible when in view */
 }
 
@@ -183,41 +183,40 @@ nav img {
   justify-content: space-between;
   display: flex;
   background-color: white; /* Set background color */
-  padding: 20px; /* Add some padding */
+  padding: 2%; /* Add some padding */
   margin: 20px 0;
 }
 
 .name-row {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px; /* Space above the image */
+  margin-top: 100%; /* Space above the image */
   text-align: center;
   background-color: white; /* Set background color */
-  padding: 0 20px; /* Add some padding */
-  margin-top: 20px;
+  padding: 0 6%; /* Add some padding */
+  margin-top: -1%;
 }
 
 .mid-row-image {
   width: 30%; /* Set width for the image */
   height: auto;
-  margin: 20px; /* Maintain aspect ratio */
+  margin: 1%; /* Maintain aspect ratio */
 }
 
 .left-row-image {
   width: 30%; /* Set width for the image */
   height: auto; /* Maintain aspect ratio */
-  margin: 10px;
+  margin: 1%;
 }
 
 .right-row-image {
   width: 30%; /* Set width for the image */
   height: auto; /* Maintain aspect ratio */
-  margin: 10px;
-  padding: 10px;
+  margin: 1%;
 }
 .small-text {
   font-size: 13px;
-  transform: scaleY(0.9) translateY(30%); /* Initial state: slightly smaller and below its normal position */
+  transform: scaleY(90%) translateY(30%); /* Initial state: slightly smaller and below its normal position */
   opacity: 0; /* Hidden initially */
   color: gray;
   display: inline-block;
@@ -229,7 +228,7 @@ nav img {
 }
 
 .small-text.show {
-  transform: scaleY(1.05) translateY(-10%); /* Final state: pops and rises into position */
+  transform: scaleY(105%) translateY(-10%); /* Final state: pops and rises into position */
   opacity: 1; /* Visible when in view */
 }
 .text-item {
@@ -244,7 +243,7 @@ nav img {
   color: black; /* Or whatever color you prefer */
   margin: 10px; /* Margin for spacing */
   font-weight: 600;
-  transform: scaleX(0.8);
+  transform: scaleX(80%);
 }
 .left-text,
 .midle-text,
