@@ -1,4 +1,5 @@
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -121,8 +122,8 @@ nav img {
 
 .flex-item {
   flex: 1 1 calc(20% - 20px);
-  margin: 11px;
-  padding: 10px;
+  margin: 4%;
+  padding: 3%;
   max-width: 20%;
   background-color: white;
   text-align: center;
@@ -161,8 +162,15 @@ nav img {
   z-index: 99;
 }
 .scale-text {
-  transform: scale(1.5);
+  transform: scale(0.6); /* Initial state: scaled down */
+  opacity: 0; /* Hidden initially */
   display: inline-block;
+  transition: transform 1.3s ease, opacity 1.3s ease; /* Smooth animation */
+}
+
+.scale-text.show {
+  transform: scale(1.5); /* Final state: scaled up when in view */
+  opacity: 1; /* Visible when in view */
 }
 
 .image-row {
@@ -199,17 +207,24 @@ nav img {
   width: 30%; /* Set width for the image */
   height: auto; /* Maintain aspect ratio */
   margin: 10px;
-  padding:10px
+  padding: 10px;
 }
 .small-text {
   font-size: 13px;
-  transform: scaleY(0.9) translateY(-10%);
+  transform: scaleY(0.9) translateY(30%); /* Initial state: slightly smaller and below its normal position */
+  opacity: 0; /* Hidden initially */
   color: gray;
   display: inline-block;
-  max-width: 150px; /* Set a maximum width for text block */
-  white-space: normal; /* Ensures the text wraps and doesn’t overflow */
-  word-wrap: break-word; /* Forces long words to wrap */
+  max-width: 150px;
+  white-space: normal;
+  word-wrap: break-word;
   overflow-wrap: break-word;
+  transition: transform 1s ease, opacity 1s ease; /* Smooth animation */
+}
+
+.small-text.show {
+  transform: scaleY(1.05) translateY(-10%); /* Final state: pops and rises into position */
+  opacity: 1; /* Visible when in view */
 }
 .text-item {
   flex: 1; /* Allow the text items to grow equally */
@@ -221,5 +236,40 @@ nav img {
 .right-text {
   font-size: 18px; /* Adjust font size as needed */
   color: black; /* Or whatever color you prefer */
-  margin: 20px; /* Margin for spacing */
+  margin: 10px; /* Margin for spacing */
+  font-weight: 600;
+  transform: scaleX(0.8);
+}
+.left-text,
+.midle-text,
+.right-text.show {
+  opacity: 1;
+  transform: translateX(0); /* Moves to original position */
+}
+
+
+.full-menu{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px; /* Space above the image */
+  background-color: white; /* Set background color */
+  padding: 0 20px; /* Add some padding */
+  margin-top: 20px;
+}
+
+.Menu{
+  padding: 14px 40px; /* Padding for a rectangular shape */
+  background-color: #da3a19; /* Red background color */
+  color: white; /* Text color */
+  border: 2px solid transparent; /* Initial transparent border */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+  z-index: 2000; /* Ensure it's on top */
+  transform: scaleY(0.9) scaleX(0.9);
+}
+
+.Menu:hover{
+  background-color: white;
+  color: #b12b22;
+  border-color: #da3a19;
 }
