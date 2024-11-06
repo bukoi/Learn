@@ -67,16 +67,16 @@ nav img {
     transform: scale(350%) scaleX(80%);
   }
   .title{
-    left: 30%;
+    left: 25%;
     top: 15%;  
     scale: 110%; 
     }
     .text-1{
-      font-size: 4vh;
+      font-size: 3vh;
       font-weight: 600;}
     .text-2{
       font-size: 3vh;
-      transform: translateY(-3vh);}
+      transform: translateY(-2vh);}
   .home-button {
     font-size: 100%;
     margin-left: 75%; 
