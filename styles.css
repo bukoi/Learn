@@ -37,7 +37,7 @@ nav {
 }
 
 nav img {
-  height: 95%;
+  height: 20%;
   margin-left: 5%;
 }
 
@@ -69,7 +69,17 @@ nav img {
   transition: background-color 0.3s, border-color 0.3s; 
   transform: rotate(90deg)translateX(20%) scaleY(0.9);
 }
-@media (min-width: 321px) {
+@media (min-width: 426px) {
+  .title{
+    position: absolute;
+    left: 30%;
+    top: 15%; 
+    z-index: 2;
+    scale: 140%;  
+    }
+    .text-2{
+      font-size: 2vh;
+      transform: translateY(-2vh);}
   .home-button {
     position: absolute;
     background-color: #ebd488;
