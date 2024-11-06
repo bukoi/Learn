@@ -54,7 +54,7 @@ nav img {
   color: white;
   border: 2px solid transparent;  
   cursor: pointer;
-  margin-left: 72%; 
+  margin-left: 75%; 
   transition: background-color 0.3s, border-color 0.3s; 
   transform: rotate(90deg)translateX(20%) scaleY(0.9);
 }
@@ -80,7 +80,7 @@ nav img {
   }
   .order-button {
     padding: 3% 8%;
-    margin-left: 82%;  
+    margin-left: 8%;  
     transform: rotate(90deg) translateY(-57%) translateX(20%) scaleY(0.9);
   }
   .flex-container {
@@ -167,8 +167,6 @@ nav img {
   .left-text,
   .midle-text,
   .right-text {
-    font-size: 18px; /* Adjust font size as needed */
-    color: black; /* Or whatever color you prefer */
     margin: 10px; /* Margin for spacing */
     font-weight: 600;
     transform: scaleX(80%);
@@ -182,29 +180,16 @@ nav img {
   
   
   .full-menu{
-    display: flex;
     justify-content: space-around;
     margin-top: 20px; /* Space above the image */
-    background-color: white; /* Set background color */
     padding: 0 20px; /* Add some padding */
     margin-top: 20px;
   }
   
   .Menu{
     padding: 14px 40px; /* Padding for a rectangular shape */
-    background-color: #da3a19; /* Red background color */
-    color: white; /* Text color */
     border: 2px solid transparent; /* Initial transparent border */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
-    z-index: 2000; /* Ensure it's on top */
     transform: scaleY(0.9) scaleX(0.9);
-  }
-  
-  .Menu:hover{
-    background-color: white;
-    color: #b12b22;
-    border-color: #da3a19;
   }
 }
 .home-button:hover {
@@ -269,10 +254,31 @@ nav img {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
+@media (max-width: 425px) {
+  .flex-container {
+    flex-direction: column;
+    margin-bottom: 10%;
+  }
+  .image-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+  }
+  .mid-row-image,.left-row-image,.right-row-image{
+    scale: 210%;
+  }
+  .title-container{
+    flex-direction: column;
+  }
+  .star{
+    opacity: 0;
+  }
+}
 .flex-item {
   flex: 1 1 calc(20% - 10%);
   margin: 4%;
+  font-display:inline-block;
   padding: 3%;
   max-width: 100%;
   background-color: white;
@@ -312,6 +318,7 @@ nav img {
   z-index: 99;
 }
 .scale-text {
+  font-weight: bold;
   transform: scale(60%); /* Initial state: scaled down */
   opacity: 0; /* Hidden initially */
   display: inline-block;
@@ -319,7 +326,7 @@ nav img {
 }
 
 .scale-text.show {
-  transform: scale(150%); /* Final state: scaled up when in view */
+  transform: scale(130%); /* Final state: scaled up when in view */
   opacity: 1; /* Visible when in view */
 }
 
@@ -330,17 +337,6 @@ nav img {
   padding: 2%; /* Add some padding */
   margin: 20px 0;
 }
-
-.name-row {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 100%; /* Space above the image */
-  text-align: center;
-  background-color: white; /* Set background color */
-  padding: 0 6%; /* Add some padding */
-  margin-top: -1%;
-}
-
 .mid-row-image {
   width: 30%; /* Set width for the image */
   height: auto;
@@ -376,6 +372,7 @@ nav img {
   opacity: 1; /* Visible when in view */
 }
 .text-item {
+  font-display:inline-block;
   flex: 1; /* Allow the text items to grow equally */
   text-align: center; /* Center align text */
 }
@@ -383,6 +380,7 @@ nav img {
 .left-text,
 .midle-text,
 .right-text {
+  font-display:inline-block;
   font-size: 18px; /* Adjust font size as needed */
   color: black; /* Or whatever color you prefer */
   margin: 10px; /* Margin for spacing */
@@ -398,12 +396,16 @@ nav img {
 
 
 .full-menu{
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px; /* Space above the image */
   background-color: white; /* Set background color */
   padding: 0 20px; /* Add some padding */
   margin-top: 20px;
+}
+@media (max-width: 426px) {
+  .full-menu{
+    margin-top: 10%;
+    background-color: white; /* Set background color */
+    padding: 10% 10%; /* Add some padding */
+  }
 }
 
 .Menu{
