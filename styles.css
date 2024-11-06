@@ -54,7 +54,7 @@ nav img {
   color: white;
   border: 2px solid transparent;  
   cursor: pointer;
-  margin-left: 75%; 
+  margin-left: 72%; 
   transition: background-color 0.3s, border-color 0.3s; 
   transform: rotate(90deg)translateX(20%) scaleY(0.9);
 }
