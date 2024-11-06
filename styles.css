@@ -1,31 +1,39 @@
-body {
+html,body {
   overflow-x:hidden;
   margin: 0;
   padding: 0;
   height: 100%;
   background-color: #faebdf;
-  font-family: Arial, sans-serif; /* Set a default font */
+  font-family: Arial, sans-serif;
   z-index: 0;
 }
-
-.title {
-  display: flex; /* Use flexbox for alignment */
-  flex-direction: column; /* Align text in a column */
+@media (min-width: 321px) {
+  .title{
   position: absolute;
-  left: 15%; /* Align to the left, giving space for the logo */
-  top: 10%;
+  left: 26%;
+  top: 15%; 
+  z-index: 2;
+  scale: 140%;  
+  }
+  .text-2{
+    font-size: 1.5vh;
+    transform: translateY(-2vh);}
+}
+.title {
+  position: absolute;
+  left: 25%;
+  top: 15%; 
   z-index: 2;
 }
-
 nav {
   position: fixed;
+  height: auto;
   width: 100%;
-  height: 7.3%;
   background-color: #ebd488;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  padding: 0 1.1%;
   z-index: 100;
+  justify-content: space-between;
 }
 
 nav img {
@@ -34,47 +42,85 @@ nav img {
 }
 
 .home-button {
+  position: absolute;
   background-color: #ebd488;
   outline: none;
   border: none;
   color: #b12b22;
   font-size: 100%;
-  margin-left: 82%; /* Pushes the button to the right */
-  transform: translateY(-5%);
-  transform: translateX(-280%);
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+  margin-left: 40%;
+  cursor: pointer; 
+  transition: background-color 0.3s, transform 0.2s;
+}
+.menu-button {
+  position: absolute;
+  color: black;
+  text-decoration: none;
+  margin-left: 60%;
 }
 .order-button {
-  position: absolute; /* Allow it to be positioned within the navbar */
-  right: 1%; /* Adjust horizontal position */
-  top: 1%; /* Adjust vertical position */
-  padding: 2% 3.5%; /* Padding for a rectangular shape */
-  background-color: #da3a19; /* Red background color */
-  color: white; /* Text color */
-  border: 2px solid transparent; /* Initial transparent border */
-  border-radius: 5px; /* Slightly rounds the corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
-  transform: rotate(90deg) translateY(-57%) translateX(20%) scaleY(0.9);
+  position: absolute;
+  padding: 2% 15%;
+  background-color: #da3a19;
+  color: white;
+  border: 2px solid transparent;  
+  cursor: pointer;
+  margin-left: 72%; 
+  transition: background-color 0.3s, border-color 0.3s; 
+  transform: rotate(90deg)translateX(20%) scaleY(0.9);
 }
+@media (min-width: 321px) {
+  .home-button {
+    position: absolute;
+    background-color: #ebd488;
+    outline: none;
+    border: none;
+    color: #b12b22;
+    font-size: 100%;
+    margin-left: 75%;
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  .menu-button {
+    position: absolute;
+    color: black;
+    text-decoration: none;
+    margin-left: 83%;
+  }
+  .order-button {
+    position: absolute;
+    padding: 3% 8%;
+    background-color: #da3a19;
+    color: white;
+    border: 2px solid transparent;  
+    cursor: pointer;
+    margin-left: 82%; 
+    transition: background-color 0.3s, border-color 0.3s; 
+    transform: rotate(90deg) translateY(-57%) translateX(20%) scaleY(0.9);
+  }
+}
+.home-button:hover {
+  background-color: #b12b22;
+  color: white;
+  transform: scale(1.1);
+}
+
 .order-button:hover {
   background-color: white;
   color: #b12b22;
   border-color: #da3a19;
 }
 .order-butt {
-  position: absolute; /* Allow it to be positioned within the navbar */
-  right: 67%; /* Adjust horizontal position */
-  top: 70%; /* Adjust vertical position */
-  padding: 4% 5%; /* Padding for a rectangular shape */
-  background-color: #da3a19; /* Red background color */
-  color: white; /* Text color */
-  border: 2px solid transparent; /* Initial transparent border */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
-  z-index: 2000; /* Ensure it's on top */
-  transform: scaleY(0.9) scaleX(0.9);
+  position: absolute;
+  padding: 4% 5%;
+  background-color: #da3a19;
+  top: 90%;
+  color: white;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  z-index: 2000;
+  transform: scaleY(1) scaleX(1);
 }
 
 .order-butt:hover {
@@ -83,12 +129,6 @@ nav img {
   border-color: #da3a19;
 }
 
-.menu-button {
-  transform: translateX(-360%);
-  color: black;
-  text-decoration: none;
-  margin:1% 1% ;
-}
 .section {
   display: flex;
   justify-content: center;
@@ -100,18 +140,13 @@ nav img {
 
 .section video {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 85%;
   width: 100%;
-  height: 85%;
+  height: 100%;
   object-fit: cover;
-  transform: translate(-50%, -73%);
+  margin-bottom: 40%;
 }
 
 .details {
-  transform: translateY(-18%);
   padding: 7%;
 }
 
