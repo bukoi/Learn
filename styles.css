@@ -58,19 +58,24 @@ nav img {
   transition: background-color 0.3s, border-color 0.3s; 
   transform: rotate(90deg)translateX(20%) scaleY(0.9);
 }
+.text-2{
+  font-size: 2vh;
+  transform: translateY(-3vh);}
 @media (min-width: 426px) {
   #recipe{
     margin-top: -11%;
     transform: scale(350%) scaleX(80%);
   }
   .title{
-    left: 20%;
-    top: 15%; 
-    transform: scale(140%);  
+    left: 15%;
+    top: 15%;   
     }
+    .text-1{
+      font-size: 5vh;
+      font-weight: 600;}
     .text-2{
-      font-size: 2vh;
-      transform: translateY(-2vh);}
+      font-size: 3vh;
+      transform: translateY(-4vh);}
   .home-button {
     font-size: 100%;
     margin-left: 75%; 
@@ -237,6 +242,10 @@ nav img {
   height: 100%;
   object-fit: cover;
   margin-bottom: 20%;
+}
+.text-1{
+  font-size: 3vh;
+  font-weight: 600;
 }
 
 .details {
