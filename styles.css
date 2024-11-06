@@ -68,7 +68,8 @@ nav img {
   }
   .title{
     left: 30%;
-    top: 15%;   
+    top: 15%;  
+    scale: 110%; 
     }
     .text-1{
       font-size: 4vh;
