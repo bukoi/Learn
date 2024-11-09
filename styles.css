@@ -85,9 +85,11 @@ nav img {
     margin-left: 83%;
   }
   .order-button {
-    padding: 3% 8%;
-    margin-left: 82%;  
-    transform: rotate(90deg) translateY(-57%) translateX(20%) scaleY(0.9);
+    padding: 1% 6%;
+    position: fixed; /* Fixes the button position */
+    top: 1px; /* Adjusts vertical position from the top */
+    right: 1px;  
+    transform: rotate(90deg) translateY(-200%) translateX(20%) scaleY(0.9);
   }
   .flex-container {
     display: flex;
